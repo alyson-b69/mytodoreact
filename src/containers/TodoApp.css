@@ -1,0 +1,156 @@
+body{
+    background-color:rgb(39, 180, 199);
+}
+
+.App {
+    font-family: sans-serif;
+    background-color: rgb(75, 188, 233);
+    min-height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper {
+    margin: 16pt;
+    padding: 30pt;
+    max-width: 90vw;
+    border-radius: 8pt;
+    background-color: #ffffff;
+    box-shadow: 0 8pt 8pt rgba(0, 0, 0, 0.3);
+  }
+
+  .task {
+    display: contents;
+    align-items: center;
+  }
+  
+  .task.done .taskText {
+    color:#ffffff;
+  }
+  
+  .taskText {
+    text-align: left;
+    width:90%;
+  }
+  
+  .taskForm {
+    display: inline-block;
+    width:100%;
+  }
+
+  .footer {
+    display: grid;
+    font-size: 0.9em;
+    align-items: center;
+    grid-template-rows: 1fr auto 1fr;
+  }
+  
+  .filters {
+    margin: 4pt 0;
+    font-size: 0.9em;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 20%;
+margin-left: auto;
+margin-right: auto;
+  }
+
+
+
+  .filter {
+    text-align: center;
+    border-radius: 4pt;
+    margin: 4pt;
+    padding: 4pt;
+    text-transform:uppercase;
+    background:#000000;
+    color:#ffffff;
+    transition: background-color 0.2s ease-out;
+  }
+
+.filter:hover{
+    background-color:#52BE80;
+    border: 1px solid #52BE80;
+}
+
+.filter.current {
+  border: 1px solid #52BE80;
+  background-color:#52BE80;
+
+}
+
+.addingBtn:hover{
+  border: 1px solid #52BE80;
+  background-color:#52BE80;
+}
+
+.deletingBtn:hover{
+  border: 1px solid rgb(207, 53, 53);
+  background-color:rgb(207, 53, 53);
+}
+
+input{
+    border:none;
+    border-bottom:solid 2px #000;
+    font-size: 1.2em;
+    max-width:100%;
+    margin-bottom:3%;
+}   
+
+.inputAdd{
+    margin-right:1%;
+}
+
+button{
+  font-size: 16px;
+  margin-right: 0px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-out;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+ul{
+    padding:0
+}
+
+li {
+  display:grid;
+  grid-gap: 10pt 4pt;
+  grid-template-columns: 4ch auto max-content;
+  background-color:#d7f2f0;
+  padding:10px;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+
+li.done {
+  background-color:#52BE80;
+}
+
+
+
+@media screen and (max-width: 1000px){
+
+    .filters{
+        max-width:100%;
+    }
+}
+
+
+@media screen and (max-width: 462px){
+
+    .inputAdd{
+        text-align:center;
+    }
+}
